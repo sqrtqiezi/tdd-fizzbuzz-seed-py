@@ -5,7 +5,7 @@ TODO
 3. 将所有计费结果拼接并使用\n分割，然后保存到receipt变量中。
 """
 import argparse
-from taxi import your_function
+from fizzbuzz import your_function
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
