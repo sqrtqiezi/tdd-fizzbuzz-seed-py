@@ -1,5 +1,27 @@
 """ Fizzbuzz """
 
-def your_function(file):
-    """TODO: rename and start coding"""
-    return file
+def process_file(path):
+    """process the test data"""
+    result = []
+    with open(path, "r") as file:
+        line = file.readline()
+        while line:
+            number = int(line)
+            result.append(fizzbuzz(number))
+            line = file.readline()
+    return "\n".join(map(lambda item: str(item), result))
+
+def __is_divide_by_or_contains(number, divisor):
+    return number % divisor == 0 \
+        or str(number).find(str(divisor)) != -1
+
+def fizzbuzz(number):
+    """fizzbuzz"""
+    result = ""
+    if __is_divide_by_or_contains(number, 3):
+        result += "Fizz"
+    if __is_divide_by_or_contains(number, 5):
+        result += "Buzz"
+    if result != "":
+        return result
+    return number
