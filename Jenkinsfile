@@ -15,13 +15,13 @@ pipeline {
         stage('Style Check') {
             steps {
                 echo 'Checking'
-                sh 'python -m pylint fizzbuzz'
+                sh 'python -m pylint taxi'
             }
         }
         stage('Test') {
             steps {
                 echo 'testing'
-                sh 'python -m pytest --cov-branch --cov=fizzbuzz tests/ --cov-report xml:coverage.xml'
+                sh 'python -m pytest --cov-branch --cov=taxi tests/ --cov-report xml:coverage.xml'
             }
         }
         stage('Run') {
