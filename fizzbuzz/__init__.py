@@ -7,9 +7,9 @@ def process_file(path):
         line = file.readline()
         while line:
             number = int(line)
-            result.append(fizzbuzz(number))
+            result.append(str(fizzbuzz(number)))
             line = file.readline()
-    return "\n".join(map(lambda item: str(item), result))
+    return "\n".join(result)
 
 def __is_divide_by_or_contains(number, divisor):
     return number % divisor == 0 \
