@@ -20,3 +20,21 @@ def test_15_retrun_fizzbuzz():
 
 def test_51_return_fizzbuzz():
     assert fizzbuzz.fizzbuzz(51) == "FizzBuzz"
+
+def test_process_all():
+    assert fizzbuzz.process_file("./resource/testData.txt") == """1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+Fizz
+14
+FizzBuzz
+16"""
