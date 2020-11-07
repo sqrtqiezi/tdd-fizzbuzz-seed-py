@@ -18,3 +18,4 @@ if __name__ == "__main__":
     test_data_file = args.test_data
     result = process_file(test_data_file)
     print(result)
+    print("chaos monkey")
