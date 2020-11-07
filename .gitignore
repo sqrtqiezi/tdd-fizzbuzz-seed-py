@@ -3,6 +3,7 @@ venv/
 .idea/
 .vscode/
 .scannerwork/
+coverage_html/
 .coverage
 *.pyc
 *.xml
